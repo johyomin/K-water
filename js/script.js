@@ -4,17 +4,21 @@ $(document).ready(function () {
 
   let modalWrap = $('.modal-wrap');
   let modalClose = $('.modal-close');
+
+
   modalClose.click(function () {
-      $('html').css('overflow', 'auto');
-  });
+    modalWrap.stop().fadeOut(100);
+    
+});
 
   let modalMain = $('.modal-main');
   modalMain.click(function (event) {
       event.stopPropagation();
   });
+  
   modalWrap.click(function () {
       modalWrap.stop().fadeOut(100);
-      $('html').css('overflow', 'auto');
+      $('html').css('overflow', 'hidden');
   });
 
 
